@@ -1,4 +1,4 @@
-# FinalProjectEvaluation-Shivani-Surana
+# ProjectEvaluation-Shivani-Surana
 
 It contains two microservices:
 
@@ -6,9 +6,9 @@ It contains two microservices:
 
 **-Flight_Data**
 
-PassengerDatat is connected to Flight_Data using Feign **Client**.
+PassengerDatat is connected to Flight_Data using Feign Client.
 I have also implemented rest template object for interconnectivity as an example.
 
 Then, we have added these to microservices to Eureka Server.
 
-After that, I have created the front-end **UI** for passenger Details using** Angular**.
+After that, I have created the front-end for passenger Details using Angular.
