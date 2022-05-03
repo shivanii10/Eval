@@ -1,0 +1,42 @@
+<form [formGroup]="formdata" > 
+    &nbsp;From :   
+    <input type= "text" [(ngModel)]="from_location" name="from_location" placeholder="FROM"  formControlName = "from_location">      
+    <br/>        
+    <div *ngIf="formdata.controls['from_location'].errors">
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         Source is required.    
+    </div><br>  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To :
+    <input type= "text" [(ngModel)]="to_location" name="to_location" placeholder="TO"  formControlName = "to_location">      
+    <br/>   
+    <div *ngIf="formdata.controls['to_location'].errors">
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        Destination is required.    
+ </div><br>  
+ &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<button (click)="searchComments()">Search</button>
+    </form>
+<br>
+<table class="table table-striped">  
+    <thead>  
+        <tr>  
+            <th>Flight No </th>  
+            <th>Airline</th>  
+            <th>From</th>  
+            <th>To</th>  
+            <th>Departure</th>  
+            <th>Arrival</th>  
+            <th>Duration</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let p of ps">  
+            <td>{{p.flight_id }}</td>  
+            <td>{{p.airline_name}}</td>  
+            <td>{{p.to_location}}</td>  
+            <td>{{p.from_location}}</td>  
+            <td>{{p.departure_time }}</td>  
+            <td>{{p.arrival_time}}</td>  
+            <td>{{p.duration}}</td> 
+        </tr>  
+    </tbody>  
+</table>  

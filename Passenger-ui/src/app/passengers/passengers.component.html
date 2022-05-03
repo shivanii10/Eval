@@ -1,0 +1,23 @@
+<table class="table table-striped">  
+    <thead>  
+        <tr>  
+            <th>ID </th>  
+            <th>First Nmae</th>  
+            <th>Last Nmae</th>  
+            <th>Email</th>  
+            <th>Contact</th>  
+            <th>Address</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let p of psg">  
+            <td>{{p.passenger_id}}</td>  
+            <td>{{p.first_name}}</td>  
+            <td>{{p.last_name}}</td>  
+            <td>{{p.email}}</td>  
+            <td>{{p.mobileno}}</td>  
+            <td>{{p.address}}</td>  
+            
+        </tr>  
+    </tbody>  
+</table>  
